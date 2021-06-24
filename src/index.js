@@ -1,17 +1,32 @@
 import React from 'react';
 import ReactDOM from 'react-dom';
-import './index.css';
-import App from './App';
-import reportWebVitals from './reportWebVitals';
+import App from './components/App';
 
-ReactDOM.render(
-  <React.StrictMode>
-    <App />
-  </React.StrictMode>,
-  document.getElementById('root')
-);
+//VIDEO START
+const videoStart = document.getElementById('video-speed');
+const videoEnd = document.getElementById('video-end');
+videoStart.addEventListener('ended', ChangeVideo);
 
-// If you want to start measuring performance in your app, pass a function
-// to log results (for example: reportWebVitals(console.log))
-// or send to an analytics endpoint. Learn more: https://bit.ly/CRA-vitals
-reportWebVitals();
+
+function ChangeVideo() {
+    console.log("DONE?");
+    videoStart.removeEventListener('ended', ChangeVideo);
+    videoStart.classList.toggle('video-hide');
+    videoStart.classList.toggle('video-show');  //HIDE
+    videoEnd.classList.toggle('video-hide'); //UN-HIDE
+    videoEnd.classList.toggle('video-show');
+    videoEnd.play();
+}
+// ////////////////////////////////////////////////////////////////////////
+
+const mainContainer = document.getElementsByClassName('main-container')[0];
+console.log(mainContainer);
+window.addEventListener('load', function (event) {
+    console.log('page is fully loaded');
+    mainContainer.classList.add('start-transition');
+});
+
+//REACT JSX ACTION
+const domContainer = document.getElementById('root');
+// 
+ReactDOM.render( <App />, domContainer);

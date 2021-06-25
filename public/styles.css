@@ -55,3 +55,17 @@ video {
     opacity: 1;
   }
 }
+@media screen and (max-width: 1024px) {
+  #root {
+    top: 25vh;
+    left: 25vw;
+    opacity: 1;
+  }
+}
+@media screen and (max-width: 1440px) {
+  #root {
+    top: 25vh;
+    left: 25vw;
+    opacity: 1;
+  }
+}

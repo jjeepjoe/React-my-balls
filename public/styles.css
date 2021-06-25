@@ -58,7 +58,7 @@ video {
     background-image: url(./images/Mobile-protrait_350x675.png);
   }
   #root {
-    /* background-color: blue; */
+    background-color: blue;
     top: 10%;
     left: 1vw;
     opacity: 1;

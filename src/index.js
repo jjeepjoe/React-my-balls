@@ -18,7 +18,6 @@ function ChangeVideo() {
 // ////////////////////////////////////////////////////////////////////////
 
 const mainContainer = document.getElementsByClassName("main-container")[0];
-console.log(mainContainer);
 window.addEventListener("load", function (event) {
   console.log("page is fully loaded");
   mainContainer.classList.add("start-transition");

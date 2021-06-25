@@ -67,7 +67,7 @@ h1:hover {
     --border-radius-size: 3px;
   }
 }
-@media screen and (orientation: landscape) and (max-width: 680px) {
+@media screen and (min-width: 355px) and (max-width: 680px) {
   h1 {
     font-size: 30px;
     left: calc(50% - 10px);

@@ -9,10 +9,9 @@ body {
   background-attachment: fixed;
   background-repeat: no-repeat;
   background-size: cover;
-  background-image: url(./images/Desktop\1920x1080\mid.png);
+  background-image: url(./images/Desktop_1920x1080_mid.png);
 }
 video {
-  background-color: rgb(255, 255, 255);
   position: block;
   top: 0;
   left: 0;
@@ -22,7 +21,7 @@ video {
 #videoContainer {
   position: relative;
   width: 100%;
-  height: 100%;
+  height: 100%;  
 }
 .video-hide {
   visibility: hidden;
@@ -54,23 +53,21 @@ video {
 }
 /* MOBILE 320 x 675 */
 @media screen and (max-width: 350px) {
-  body {
+  body{
     background-image: url(./images/Mobile-protrait_350x675.png);
   }
   #root {
-    background-color: blue;
     top: 10%;
     left: 1vw;
     opacity: 1;
   }
 }
 /* MOBILE SIDE-WAYS */
-@media screen and (orientation: landscape) and (max-width: 680px) {
+@media screen and (min-width: 355px) and (max-width: 680px) {
   body {
     background-image: url(./images/Mobile-landscape_675x350.png);
   }
   #root {
-    background-color: purple;
     top: 0;
     left: 10vw;
     opacity: 1;
@@ -82,7 +79,6 @@ video {
     background-image: url(./images/Tablet-landscape_1024x765.png);
   }
   #root {
-    background-color: green;
     top: 25vh;
     left: 25vw;
     opacity: 1;
@@ -94,15 +90,16 @@ video {
     background-image: url(./images/Desktop_1440x800_low.png);
   }
   #root {
-    background-color: orange;
     top: 25vh;
     left: 10vw;
     opacity: 1;
   }
 }
 @media screen and (min-width: 1030px) and (max-width: 1440px) {
+  body {
+    background-image: url(./images/Desktop_1440x800_low.png);
+  }
   #root {
-    background-color: yellow;
     top: 25vh;
     left: 25vw;
     opacity: 1;

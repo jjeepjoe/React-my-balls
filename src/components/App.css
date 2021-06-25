@@ -67,3 +67,18 @@ h1:hover {
     --border-radius-size: 3px;
   }
 }
+@media screen and (orientation: landscape) and (max-width: 680px) {
+  h1 {
+    font-size: 30px;
+    left: calc(50% - 10px);
+  }
+  #shapeContainer {
+    width: 50%;
+    height: 50%;
+    top: 5%;
+    left: 25%;
+  }
+  :root {
+    --border-radius-size: 3px;
+  }
+}

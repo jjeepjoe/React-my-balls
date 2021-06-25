@@ -28,7 +28,7 @@ video {
   display: block;
 }
 .root-opacity {
-  opacity: 0;
+  opacity: 1;
 }
 #root {
   position: absolute;
@@ -39,15 +39,15 @@ video {
   text-align: center;
   line-height: 1.5;
   white-space: nowrap;
-  transition-property: opacity;
+  /* transition-property: opacity;
   transition-duration: 8s;
   transition-timing-function: ease-in;
-  transition-delay: 4s;
+  transition-delay: 4s; */
 }
 .start-transition {
   opacity: 1;
 }
-
+/* MOBILE 320 x 675 */
 @media screen and (max-width: 350px) {
   #root {
     background-color: blue;
@@ -56,11 +56,27 @@ video {
     opacity: 1;
   }
 }
-@media screen and (min-width: 355px) and (max-width: 1024px) {
+@media screen and (orientation: landscape) and (max-width: 680px) {
+  #root {
+    background-color: purple;
+    top: 0;
+    left: 10vw;
+    opacity: 1;
+  }
+}
+@media screen and (orientation: landscape) and (min-width: 685px) and (max-width: 1024px) {
   #root {
     background-color: green;
     top: 25vh;
     left: 25vw;
+    opacity: 1;
+  }
+}
+@media screen and (orientation: portrait) and (min-width: 685px) and (max-width: 1024px) {
+  #root {
+    background-color: orange;
+    top: 25vh;
+    left: 10vw;
     opacity: 1;
   }
 }

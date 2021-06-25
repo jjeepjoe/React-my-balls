@@ -36,7 +36,6 @@ video {
   height: 500px;
   top: 25vh;
   left: 25vw;
-  /* background: white; */
   text-align: center;
   line-height: 1.5;
   white-space: nowrap;
@@ -51,7 +50,6 @@ video {
 
 @media screen and (max-width: 350px) {
   #root {
-    background-color: blue;
     top: 10vh;
     left: 2vw;
     opacity: 1;

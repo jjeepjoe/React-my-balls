@@ -1,3 +1,7 @@
+:root {
+  --border-radius-size: 10px;
+}
+
 h1 {
   position: absolute;
   display: inline-flex;
@@ -16,50 +20,36 @@ h1:hover {
   top: 0;
   left: 0;
 }
-.daddyOval {
+.oval-shape {
   position: absolute;
+  border: var(--border-radius-size) solid black;
+  border-radius: 50%;
   bottom: 0;
+}
+.daddyOval {
   left: 0;
   width: 95%;
   height: 95%;
-  border: 10px solid black;
-  border-radius: 50%;
 }
 .mommyOval {
-  position: absolute;
-  bottom: 0;
   left: 10%;
   width: 75%;
   height: 75%;
-  border: 10px solid black;
-  border-radius: 50%;
 }
 .emilyOval {
-  position: absolute;
-  bottom: 0;
   left: 20%;
   width: 55%;
   height: 55%;
-  border: 10px solid black;
-  border-radius: 50%;
 }
 .rosemarieOval {
-  position: absolute;
-  bottom: 0;
   left: 30%;
   width: 35%;
   height: 35%;
-  border: 10px solid black;
-  border-radius: 50%;
 }
 .joeyOval {
-  position: absolute;
-  bottom: 0;
   left: 40%;
   width: 15%;
   height: 15%;
-  border: 10px solid black;
-  border-radius: 50%;
 }
 
 @media screen and (max-width: 350px) {
@@ -72,5 +62,8 @@ h1:hover {
     height: 50%;
     top: 25%;
     left: 10%;
+  }
+  :root {
+    --border-radius-size: 3px;
   }
 }

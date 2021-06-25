@@ -1,47 +1,50 @@
-a{
-    color: red;
+a {
+  color: red;
 }
-.span-opactiy-out{
-    opacity: 1;
-    margin-left: 10px;
+.span-opactiy-out {
+  opacity: 1;
+  margin-left: 10px;
 }
-span{
+span {
   color: red;
   opacity: 0;
 }
 @keyframes extend {
-    from{
-        margin-left: 0;
-        opacity: 0;
-    }
-    to{
-        margin-left: 10px;
-        opacity: 1;
-    }    
+  from {
+    margin-left: 0;
+    opacity: 0;
+  }
+  to {
+    margin-left: 10px;
+    opacity: 1;
+  }
 }
 @keyframes retract {
-    from{
-        margin-left: 10px;
-        opacity: 1;
-    }
-    to{
-        margin-left: 0;
-        opacity: 0;
-    }    
+  from {
+    margin-left: 10px;
+    opacity: 1;
+  }
+  to {
+    margin-left: 0;
+    opacity: 0;
+  }
 }
 /* THE TIME TO EXTEND EACH LETTER > ALL ARE DISPLYED AT ONCE > DURATION IS SPEED */
-.span-actionOut{
-    animation-name: extend;
-    animation-duration: 2s;
-    animation-timing-function: ease-in;
-    animation-fill-mode: forwards;
-    animation-delay: 0.5s;
+.span-actionOut {
+  animation-name: extend;
+  animation-duration: 2s;
+  animation-timing-function: ease-in;
+  animation-fill-mode: forwards;
+  animation-delay: 0.5s;
 }
 /* TIME TO RETRACT EACH LETTER >  */
-.span-actionIn{
-    animation-name: retract;
-    animation-duration: 1s;
-    animation-timing-function: ease-out;
-    animation-fill-mode: forwards;
-    animation-delay: 0.5s;
+.span-actionIn {
+  animation-name: retract;
+  animation-duration: 1s;
+  animation-timing-function: ease-out;
+  animation-fill-mode: forwards;
+  animation-delay: 0.5s;
+}
+
+@media screen and (min-width: 350px) {
 }

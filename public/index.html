@@ -4,31 +4,28 @@
     <meta charset="utf-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1" />
     <title>React App</title>
-    <link rel="stylesheet" href="./styles.css">
+    <link rel="stylesheet" href="./styles.css" />
   </head>
-  
+
   <body>
     <noscript>You need to enable JavaScript to run this app.</noscript>
 
-    <div id='videoContainer'>
+    <div id="videoContainer">
+      <video id="video-end" class="video-hide" loop muted>
+        <!-- <source src="./videos/Modify loop 2.mp4" type="video/mp4">
+        </source> -->
+        Sorry Bro, you missed the video
+      </video>
+      <video id="video-speed" class="video-show" poster="" muted>
+        <!-- <source src="./videos/Modify start 2.mp4" type="video/mp4">
+        </source> -->
+        Sorry Bro, you missed the video
+      </video>
 
-      <video id='video-end' class='video-hide' preload="auto" loop muted>
-        <source src="./videos/Modify loop 2.mp4" type="video/mp4">
-        </source>
-        Sorry Bro, you missed the video
-      </video>
-      <video id='video-speed' class='video-show' poster="./images/SunriseImage.png"  muted >
-        <source src="./videos/Modify start 2.mp4" type="video/mp4">
-        </source>
-        Sorry Bro, you missed the video
-      </video>
-      
       <!-- React JSX -->
-      <div id="root" class="main-container root-opacity">
-        
-      </div>
+      <div id="root" class="main-container root-opacity"></div>
     </div>
-    
-    <script src="../src/index.js" ></script>
+
+    <script src="../src/index.js"></script>
   </body>
 </html>

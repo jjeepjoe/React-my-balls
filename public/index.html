@@ -3,6 +3,7 @@
   <head>
     <meta charset="utf-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <meta http-equiv="X-UA-Compatible" content="IE=Edge,chrome=1">
     <title>React App</title>
     <link rel="stylesheet" href="./styles.css" />
   </head>
@@ -11,21 +12,25 @@
     <noscript>You need to enable JavaScript to run this app.</noscript>
 
     <div id="videoContainer">
-      <video id="video-end" class="video-hide" loop muted>
-        <!-- <source src="./videos/Modify loop 2.mp4" type="video/mp4">
-        </source> -->
-        Sorry Bro, you missed the video
-      </video>
-      <video id="video-speed" class="video-show" muted>
-        <!-- <source src="./videos/Modify start 2.mp4" type="video/mp4">
-        </source> -->
-        Sorry Bro, you missed the video
-      </video>
 
+      <div id="video-end">
+        <video class="video-hide video-mobiP" src="./videos/2_Mobile_size_350x675.mp4" type="video/mp4" loop muted></video>
+        <video class="video-hide video-mobiL" src="./videos/2_Mobile_size_675x350.mp4" type="video/mp4" loop muted></video>
+        <video class="video-hide video-tablL" src="./videos/2_Tablet_size_1024x765.mp4" type="video/mp4" loop muted></video>
+        <video class="video-hide video-tablP" src="./videos/2_Tablet_size_765x1024.mp4" type="video/mp4" loop muted></video>
+        <video class='video-hide video-lrg' src="./videos/Sunrise_2_ending.mp4" type="video/mp4" loop muted></video>
+      </div>
+
+      <div id="video-start">
+        <video class="video-show video-mobiP" src="./videos/1_Mobile_size_350x675.mp4" type="video/mp4" autoplay muted></video>
+        <video class="video-show video-mobiL" src="./videos/1_Mobile_size_675x350.mp4" type="video/mp4" autoplay muted></video>
+        <video class="video-show video-tablL" src="./videos/1_Tablet_size_1024x765.mp4" type="video/mp4" autoplay muted></video>
+        <video class="video-show video-tablP" src="./videos/1_Tablet_size_765x1024.mp4" type="video/mp4" autoplay muted></video>
+        <video class='video-show video-lrg' src="./videos/Sunrise_2_speed.mp4" type="video/mp4" autoplay muted></video>
+      </div>
       <!-- React JSX -->
       <div id="root" class="main-container root-opacity"></div>
     </div>
 
-    <script src="../src/index.js"></script>
   </body>
 </html>

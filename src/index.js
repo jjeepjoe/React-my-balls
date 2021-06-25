@@ -2,18 +2,36 @@ import React from "react";
 import ReactDOM from "react-dom";
 import App from "./components/App";
 
-//VIDEO START
-const videoStart = document.getElementById("video-speed");
-const videoEnd = document.getElementById("video-end");
-videoStart.addEventListener("ended", ChangeVideo);
+//VIDEO CONTAINER RETURNS ARRAY
+const videoStartDiv = document.getElementById("video-start");
+const videoStartList = videoStartDiv.getElementsByTagName('video');
+let startVideo;
+const videoEndList = document.getElementById("video-end").getElementsByTagName('video');
+let endVideo;
+// console.log(videoStartList);
+for(let item of videoStartList){
+  if (getComputedStyle(item).display === 'block'){    
+    startVideo = item;
+    // console.log(startVideo);
+  }  
+}
+console.log(videoEndList);
+for(let item of videoEndList){
+  if(getComputedStyle(item).display === 'block'){
+    endVideo = item;
+    // console.log(endVideo);
+  }
+}
+startVideo.addEventListener("ended", ChangeVideo);
 
-function ChangeVideo() {
-  videoStart.removeEventListener("ended", ChangeVideo);
-  videoStart.classList.toggle("video-hide");
-  videoStart.classList.toggle("video-show"); //HIDE
-  videoEnd.classList.toggle("video-hide"); //UN-HIDE
-  videoEnd.classList.toggle("video-show");
-  videoEnd.play();
+function ChangeVideo() {  
+  startVideo.removeEventListener("ended", ChangeVideo);
+  startVideo.classList.toggle("video-hide");
+  videoStartDiv.setAttribute('hidden', 'true');
+  // endVideo.classList.toggle("video-hide"); //UN-HIDE
+  endVideo.classList.toggle("video-show");
+  endVideo.play();
+  // console.log("DUN VIDEO");
 }
 // ////////////////////////////////////////////////////////////////////////
 

@@ -1,35 +1,66 @@
+:root{
+  --background-image: url(./images/Desktop_1920x1080_mid.png);
+  --video-opacity: 1;
+}
 * {
   margin: 0;
   padding: 0;
 }
 body {
   width: 100%;
-  height: 100vh;
-  background-position: center center;
-  background-attachment: fixed;
-  background-repeat: no-repeat;
-  background-size: cover;
-  background-image: url(./images/Desktop_1920x1080_mid.png);
+  height: 100vh;  
 }
-video {
-  position: block;
+#video-start{
+  opacity: var(--video-opacity);
+  position: absolute;
+  width: 100%;
+  height: 100%;
   top: 0;
-  left: 0;
+  left: 0;  
+}
+#video-end {
+  position: absolute;
+  width: 100%;
+  height: 100%;
+  top: 0;
+  left: 0;  
+}
+video{
   min-width: 100%;
   min-height: 100%;
 }
 #videoContainer {
   position: relative;
   width: 100%;
-  height: 100%;  
+  height: 100%;
+  background-position: center center;
+  background-attachment: fixed;
+  background-repeat: no-repeat;
+  background-size: cover;
+  background-image: var(--background-image);  
 }
 .video-hide {
-  visibility: hidden;
+  /* visibility: hidden; */
   display: none;
 }
 .video-show {
   visibility: visible;
   display: block;
+}
+.video-mobiP{
+  display: none;
+}
+.video-mobiL{
+  display: none;
+}
+.video-tablL{
+  display: none;
+}
+.video-tablP{
+  display: none;
+}
+.video-lrg{
+  display: none;
 }
 .root-opacity {
   opacity: 1;
@@ -53,55 +84,88 @@ video {
 }
 /* MOBILE 320 x 675 */
 @media screen and (max-width: 350px) {
-  body{
-    background-image: url(./images/Mobile-protrait_350x675.png);
+  :root{
+    --background-image: url(./images/Mobile-portrait_350x675.png);
   }
   #root {
+    /* background-color: aquamarine; */
     top: 10%;
     left: 1vw;
     opacity: 1;
   }
+  .video-mobiP{
+    display: block;
+  }
 }
 /* MOBILE SIDE-WAYS */
-@media screen and (min-width: 355px) and (max-width: 680px) {
-  body {
-    background-image: url(./images/Mobile-landscape_675x350.png);
+@media screen and (min-width: 356px) and (max-width: 680px) {
+  :root {
+    --background-image: url(./images/Mobile-landscape_675x350.png);
   }
   #root {
+    /* background-color: burlywood; */
     top: 0;
     left: 10vw;
     opacity: 1;
   }
-}
-/* TABLET NORMAL */
-@media screen and (orientation: landscape) and (min-width: 685px) and (max-width: 1024px) {
-  body {
-    background-image: url(./images/Tablet-landscape_1024x765.png);
-  }
-  #root {
-    top: 25vh;
-    left: 25vw;
-    opacity: 1;
+  .video-mobiL{
+    display: block;
   }
 }
 /* TABLET SIDE-WAYS */
-@media screen and (orientation: portrait) and (min-width: 685px) and (max-width: 1024px) {
-  body {
-    background-image: url(./images/Desktop_1440x800_low.png);
+@media screen and (min-width: 681px) and (max-width: 1000px) {
+  :root {
+    --background-image: url(./images/Tablet-portrait_765x1024.png);
   }
   #root {
+    /* background-color: darkolivegreen; */
     top: 25vh;
     left: 10vw;
     opacity: 1;
   }
+  .video-tablP{
+    display: block;
+  }
 }
-@media screen and (min-width: 1030px) and (max-width: 1440px) {
-  body {
-    background-image: url(./images/Desktop_1440x800_low.png);
+/* TABLET NORMAL */
+@media screen and (min-width: 1001px) and (max-width: 1050px) {
+  :root {
+    --background-image: url(./images/Tablet-landscape_1024x765.png);
   }
   #root {
+    /* background-color: darkorchid; */
     top: 25vh;
     left: 25vw;
     opacity: 1;
+  }
+  .video-tablL{
+    display: block;
+  }
+}
+@media screen and (min-width: 1051px) and (max-width: 1440px) {
+  :root {
+    --background-image: url(./images/Desktop_1440x800_low.png);
+  }
+  #root {
+    /* background-color: cyan; */
+    top: 25vh;
+    left: 25vw;
+    opacity: 1;
+  }
+  .video-lrg{
+    display: block;
+  }
+}@media screen and (min-width: 1441px){
+  :root {
+    --background-image: url(./images/Desktop_1920x1080_mid.png);
+  }
+  #root {
+    /* background-color:red; */
+    top: 25vh;
+    left: 25vw;
+    opacity: 1;
+  }
+  .video-lrg{
+    display: block;
   }
 }

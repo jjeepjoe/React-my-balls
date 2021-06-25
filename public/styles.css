@@ -50,20 +50,23 @@ video {
 
 @media screen and (max-width: 350px) {
   #root {
-    top: 10vh;
-    left: 2vw;
+    background-color: blue;
+    top: 10%;
+    left: 1vw;
     opacity: 1;
   }
 }
-@media screen and (max-width: 1024px) {
+@media screen and (min-width: 355px) and (max-width: 1024px) {
   #root {
+    background-color: green;
     top: 25vh;
     left: 25vw;
     opacity: 1;
   }
 }
-@media screen and (max-width: 1440px) {
+@media screen and (min-width: 1030px) and (max-width: 1440px) {
   #root {
+    background-color: yellow;
     top: 25vh;
     left: 25vw;
     opacity: 1;

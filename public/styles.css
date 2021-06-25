@@ -28,7 +28,7 @@ video {
   display: block;
 }
 .root-opacity {
-  opacity: 1;
+  opacity: 0;
 }
 #root {
   position: absolute;
@@ -40,10 +40,10 @@ video {
   text-align: center;
   line-height: 1.5;
   white-space: nowrap;
-  /* transition-property: opacity;
+  transition-property: opacity;
   transition-duration: 8s;
   transition-timing-function: ease-in;
-  transition-delay: 4s; */
+  transition-delay: 4s;
 }
 .start-transition {
   opacity: 1;
@@ -52,5 +52,8 @@ video {
 @media screen and (max-width: 350px) {
   #root {
     background-color: blue;
+    top: 10vh;
+    left: 2vw;
+    opacity: 1;
   }
 }

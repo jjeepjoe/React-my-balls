@@ -1,9 +1,12 @@
+:root {
+  --margin-space: 10px;
+}
 a {
   color: red;
 }
 .span-opactiy-out {
   opacity: 1;
-  margin-left: 10px;
+  margin-left: var(--margin-space);
 }
 span {
   color: red;
@@ -15,13 +18,13 @@ span {
     opacity: 0;
   }
   to {
-    margin-left: 10px;
+    margin-left: var(--margin-space);
     opacity: 1;
   }
 }
 @keyframes retract {
   from {
-    margin-left: 10px;
+    margin-left: var(--margin-space);
     opacity: 1;
   }
   to {
@@ -47,4 +50,7 @@ span {
 }
 
 @media screen and (min-width: 350px) {
+  :root {
+    --margin-space: 5px;
+  }
 }
